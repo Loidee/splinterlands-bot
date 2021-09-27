@@ -17,7 +17,7 @@ async function getCards() {
 } 
 
 async function getQuest() {
-    return quests.getPlayerQuest(process.env.ACCOUNT.split('@')[0])
+    return quests.getPlayerQuest(process.env.USERNAME)
         .then(x=>x)
         .catch(e=>console.log('No quest data, splinterlands API didnt respond, or you are wrongly using the email and password instead of username and posting key'))
 }
